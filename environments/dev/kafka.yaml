@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     name     : in-cluster
-    namespace: mongodb-eks
+    namespace: kafkakeeper
   sources:
 
     - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
