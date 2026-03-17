@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name     : kafka
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name     : in-cluster
+    namespace: mongodb-eks
+  sources:
+
+    - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
+      targetRevision: main
+      ref: values
+
+    - chart: kafka
+      repoURL: https://charts.bitnami.com/bitnami
+      targetRevision: 4.0.*
+      helm:
+        releaseName: kafka
+        valueFiles:
+          - $values/charts/kafka/values_dev.yaml
+
+  project: default
+  syncPolicy:
+    automated:
+      prune   : true
+      selfHeal: true
