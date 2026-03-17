@@ -21,7 +21,7 @@ spec:
       helm:
         releaseName: zookeeper
         valueFiles:
-          - $values/charts/zookeeper/values_dev.yaml
+          - $values/charts/zookeeper/dev/values_dev.yaml
 
   project: default
   syncPolicy:

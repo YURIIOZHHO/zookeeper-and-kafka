@@ -21,7 +21,7 @@ spec:
       helm:
         releaseName: kafka
         valueFiles:
-          - $values/charts/kafka/values_dev.yaml
+          - $values/charts/kafka/dev/values_dev.yaml
 
   project: default
   syncPolicy:
