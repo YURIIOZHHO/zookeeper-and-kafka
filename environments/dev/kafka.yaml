@@ -23,7 +23,7 @@ spec:
     #     valueFiles:
     #       - $values/charts/kafka/dev/values_dev.yaml
 
-    - chart: my-strimzi-kafka-operator
+    - chart: strimzi-kafka-operator
       repoURL: https://strimzi.io/charts
       targetRevision: 0.50.*
       # helm:
