@@ -23,17 +23,20 @@ spec:
     #     valueFiles:
     #       - $values/charts/kafka/dev/values_dev.yaml
 
-    - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
-      targetRevision: main
-      ref: values
+    - chart: my-strimzi-kafka-operator
+      repoURL: https://strimzi.io/charts
+      targetRevision: 0.50.*
+      # helm:
+      #   releaseName: kafka
+      #   valueFiles:
+      #     - $values/charts/kafka/dev/values_dev.yaml
 
-    - chart: kafka
-      repoURL: https://charts.bitnami.com/bitnami
-      targetRevision: 32.4.*
-      helm:
-        releaseName: kafka
-        valueFiles:
-          - $values/charts/kafka/dev/values_dev.yaml
+    - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
+      path: charts/kafka/dev/
+      targetRevision: main
+      # ref: values
+
+
 
 
   project: default
