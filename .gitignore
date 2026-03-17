@@ -1,2 +1,2 @@
 environments/dev/zookeeper.yaml
-charts/zookeeper
+charts/zookeeper/
