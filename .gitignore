@@ -1,0 +1,2 @@
+argocd-test/environments/dev/zookeeper.yaml
+argocd-test/charts/zookeeper

@@ -11,6 +11,18 @@ spec:
     namespace: kafkakeeper
   sources:
 
+    # - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
+    #   targetRevision: main
+    #   ref: values
+
+    # - chart: kafka
+    #   repoURL: https://charts.bitnami.com/bitnami
+    #   targetRevision: 32.4.*
+    #   helm:
+    #     releaseName: kafka
+    #     valueFiles:
+    #       - $values/charts/kafka/dev/values_dev.yaml
+
     - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
       targetRevision: main
       ref: values
@@ -22,6 +34,7 @@ spec:
         releaseName: kafka
         valueFiles:
           - $values/charts/kafka/dev/values_dev.yaml
+
 
   project: default
   syncPolicy:
