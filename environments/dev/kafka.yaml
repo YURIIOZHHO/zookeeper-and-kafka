@@ -40,9 +40,6 @@ spec:
       repoURL: https://ui.charts.kafbat.io/
       targetRevision: 1.6.0
 
-
-
-
   project: default
   syncPolicy:
     automated:
