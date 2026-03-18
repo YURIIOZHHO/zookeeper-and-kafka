@@ -41,8 +41,13 @@ spec:
       targetRevision: 1.6.0
       helm:
         releaseName: kafka-ui
-        valueFiles:
-          - $values/charts/kafka/dev/kafka_ui_values_dev.yaml
+        values: |
+          yamlConfig:
+            kafka:
+              clusters:
+                - name: local
+                  bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
+                  read-only: true
           
 
   project: default
