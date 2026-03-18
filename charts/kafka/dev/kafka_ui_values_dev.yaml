@@ -43,7 +43,7 @@ yamlApplicationConfig:
         bootstrapServers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9093
         properties:
           security.protocol: SSL
-          ssl.truststore.location: /opt/kafka-ui/certs
+          ssl.truststore.location: /opt/kafka-ui/certs/ca.crt
           ssl.truststore.type: PEM
           # ssl.truststore.certificates: /opt/kafka-ui/certs/ca.crt
  
