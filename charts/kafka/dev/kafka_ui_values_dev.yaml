@@ -106,6 +106,7 @@ initContainers: {}
 volumeMounts:
   - name: kafka-ca-cert
     mountPath: /opt/kafka-ui/certs
+    subPath: ca.crt
     # readOnly: true
 ## @param volumes [object] Optionally specify additional volumes for the Kafka-UI pods
 volumes:
