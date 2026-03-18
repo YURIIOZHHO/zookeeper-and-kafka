@@ -41,19 +41,8 @@ spec:
       targetRevision: 1.6.0
       helm:
         releaseName: kafka-ui
-        values: |
-          yamlConfig:
-            kafka:
-              clusters:
-                - name: local
-                  bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc.cluster.local:9092
-                  read-only: true
-                  properties:
-                    security.protocol: PLAINTEXT
-
-          service:
-            type: NodePort
-            nodePort: 30080
+        valueFiles:
+          - $values/charts/kafka/dev/kafka_ui_values_dev.yaml
 
   project: default
   syncPolicy:
