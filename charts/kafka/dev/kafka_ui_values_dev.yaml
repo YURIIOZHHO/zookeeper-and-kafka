@@ -2,7 +2,7 @@ yamlConfig:
   kafka:
     clusters:
       - name: local
-        bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
+        bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc.cluster.local:9092
       
         # metrics:
         #   type: JMX
