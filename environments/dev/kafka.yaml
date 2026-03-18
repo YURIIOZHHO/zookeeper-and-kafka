@@ -34,11 +34,16 @@ spec:
     - repoURL: https://github.com/YURIIOZHHO/zookeeper-and-kafka.git
       path: charts/kafka/dev/
       targetRevision: main
-      # ref: values
+      ref: values
     
     - chart: kafka-ui
       repoURL: https://ui.charts.kafbat.io/
       targetRevision: 1.6.0
+      helm:
+        releaseName: kafka-ui
+        valueFiles:
+          - $values/charts/kafka/dev/kafka_ui_values_dev.yaml
+          
 
   project: default
   syncPolicy:

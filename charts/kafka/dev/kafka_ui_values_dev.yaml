@@ -1,0 +1,17 @@
+replicaCount: 1
+image:
+  tag: latest
+
+# Strimzi cluster inside the same namespace
+clusters:
+  - name: my-cluster
+    bootstrapServers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
+  
+    defaultCluster: true
+    ksqldb: ""
+    schemaRegistry: ""
+    kafkaConnect: ""
+
+service:
+  type: ClusterIP
+  port: 8080
