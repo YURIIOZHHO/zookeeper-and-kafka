@@ -1,16 +1,13 @@
-kafka:
-  clusters:
-    - name: local
-      bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
-      properties: {}
-      default-key-serde: String
-      default-value-serde: String
-      read-only: true
-
-polling:
-  poll-timeout-ms: 1000
-  max-page-size: 500
-  default-page-size: 100
+yamlConfig:
+  kafka:
+    clusters:
+      - name: local
+        bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
+      
+        metrics:
+          type: JMX
+          port: 9997 
+        read-only: true
 
 # # ======================================================
 # # Kafka Clusters Configuration
