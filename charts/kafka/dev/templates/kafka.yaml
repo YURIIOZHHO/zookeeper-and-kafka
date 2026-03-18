@@ -7,20 +7,20 @@ spec:
   kafka:
     version: 4.0.0
     listeners:
-      - name: plain
-        port: 9092
-        type: internal
-        tls: false
-        configuration:
-          useServiceDnsDomain: true
+      # - name: plain
+      #   port: 9092
+      #   type: internal
+      #   tls: false
+      #   configuration:
+      #     useServiceDnsDomain: true
       - name: controller
         port: 9093
         type: internal
-        tls: false
-      - name: external
-        port: 30092       
-        type: nodeport    
-        tls: false
+        tls: true
+      # - name: external
+      #   port: 30092       
+      #   type: nodeport    
+      #   tls: false
     config:
       process.roles: "controller,broker"
   entityOperator:
