@@ -7,12 +7,12 @@ spec:
   kafka:
     version: 4.0.0
     listeners:
-      # - name: plain
-      #   port: 9092
-      #   type: internal
-      #   tls: false
-      #   configuration:
-      #     useServiceDnsDomain: true
+      - name: plain
+        port: 9092
+        type: internal
+        tls: false
+        configuration:
+          useServiceDnsDomain: true
       - name: controller
         port: 9093
         type: internal
