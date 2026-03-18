@@ -44,7 +44,7 @@ yamlApplicationConfig:
         properties:
           security.protocol: SSL
           ssl.truststore.location: /opt/kafka-ui/certs
-          # Путь к файлу внутри контейнера, куда мы примонтировали секрет
+          ssl.truststore.type: PEM
           ssl.truststore.certificates: /opt/kafka-ui/certs/ca.crt
  
   # spring:
