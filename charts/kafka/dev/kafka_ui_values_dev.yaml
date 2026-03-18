@@ -4,9 +4,9 @@ yamlConfig:
       - name: local
         bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
       
-        metrics:
-          type: JMX
-          port: 9997 
+        # metrics:
+        #   type: JMX
+        #   port: 9997 
         read-only: true
 
 # # ======================================================
