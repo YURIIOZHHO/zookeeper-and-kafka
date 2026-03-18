@@ -46,9 +46,14 @@ spec:
             kafka:
               clusters:
                 - name: local
-                  bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
+                  bootstrap-servers: my-cluster-kafka-bootstrap.kafkakeeper.svc.cluster.local:9092
                   read-only: true
-          
+                  properties:
+                    security.protocol: PLAINTEXT
+
+          service:
+            type: NodePort
+            nodePort: 30080
 
   project: default
   syncPolicy:
