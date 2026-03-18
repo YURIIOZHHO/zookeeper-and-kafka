@@ -43,7 +43,7 @@ yamlApplicationConfig:
         bootstrapServers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9093
         properties:
           security.protocol: SSL
-          ssl.truststore.type: PEM
+          ssl.truststore.location: /opt/kafka-ui/certs
           # Путь к файлу внутри контейнера, куда мы примонтировали секрет
           ssl.truststore.certificates: /opt/kafka-ui/certs/ca.crt
  
@@ -105,7 +105,7 @@ initContainers: {}
 ## @param volumeMounts [object] Optionally specify additional volumeMounts for the kafka-UI container
 volumeMounts:
   - name: kafka-ca-cert
-    mountPath: /opt/kafka-ui/certs
+    mountPath: /opt/kafka-ui/certs/ca.crt
     subPath: ca.crt
     # readOnly: true
 ## @param volumes [object] Optionally specify additional volumes for the Kafka-UI pods
