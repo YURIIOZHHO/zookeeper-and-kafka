@@ -45,7 +45,7 @@ yamlApplicationConfig:
           security.protocol: SSL
           ssl.truststore.location: /opt/kafka-ui/certs
           ssl.truststore.type: PEM
-          ssl.truststore.certificates: /opt/kafka-ui/certs/ca.crt
+          # ssl.truststore.certificates: /opt/kafka-ui/certs/ca.crt
  
   # spring:
   #   security:
