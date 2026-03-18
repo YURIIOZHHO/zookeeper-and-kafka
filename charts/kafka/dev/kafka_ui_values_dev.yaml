@@ -39,8 +39,8 @@ yamlApplicationConfig:
   # {}
   kafka:
     clusters:
-      - name: yaml
-        bootstrapServers: kafka-service:9092
+      - name: local
+        bootstrapServers: my-cluster-kafka-bootstrap.kafkakeeper.svc.cluster.local:9092
   # spring:
   #   security:
   #     oauth2:
