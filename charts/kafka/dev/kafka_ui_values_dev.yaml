@@ -40,11 +40,11 @@ yamlApplicationConfig:
   kafka:
     clusters:
       - name: local
-        bootstrapServers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9093
-        properties:
-          security.protocol: SSL
-          ssl.truststore.location: /opt/kafka-ui/certs/ca.crt
-          ssl.truststore.type: PEM
+        bootstrapServers: my-cluster-kafka-bootstrap.kafkakeeper.svc:9092
+        # properties:
+        #   security.protocol: SSL
+        #   ssl.truststore.location: /opt/kafka-ui/certs/ca.crt
+        #   ssl.truststore.type: PEM
           # ssl.truststore.certificates: /opt/kafka-ui/certs/ca.crt
  
   # spring:
@@ -103,16 +103,16 @@ resources:
 initContainers: {}
 
 ## @param volumeMounts [object] Optionally specify additional volumeMounts for the kafka-UI container
-volumeMounts:
-  - name: kafka-ca-cert
-    mountPath: /opt/kafka-ui/certs/ca.crt
-    subPath: ca.crt
+volumeMounts: {}
+  # - name: kafka-ca-cert
+  #   mountPath: /opt/kafka-ui/certs/ca.crt
+  #   subPath: ca.crt
     # readOnly: true
 ## @param volumes [object] Optionally specify additional volumes for the Kafka-UI pods
-volumes:
-  - name: kafka-ca-cert
-    secret:
-      secretName: my-cluster-cluster-ca-cert
+volumes: {}
+  # - name: kafka-ca-cert
+  #   secret:
+  #     secretName: my-cluster-cluster-ca-cert
 ## @param hostAliases [object] Kafka-UI pods host aliases
 ## https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
 ##

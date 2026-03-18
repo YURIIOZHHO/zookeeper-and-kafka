@@ -16,7 +16,7 @@ spec:
       - name: controller
         port: 9093
         type: internal
-        tls: true
+        tls: false
       # - name: external
       #   port: 30092       
       #   type: nodeport    
